@@ -1,0 +1,24 @@
+package tommy.spring.polymorphism;
+
+import org.springframework.stereotype.Component;
+
+public class AppleSpeaker implements Speaker {
+	public AppleSpeaker() {
+		System.out.println("AppleSpeaker 按眉 积己");
+		
+	}
+
+	@Override
+	public void volumeUp() {
+	
+		System.out.println("AplleSpeaker 家府 棵赴促");
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		System.out.println("AplleSpeaker 家府 郴赴促");
+		
+	}
+
+}
