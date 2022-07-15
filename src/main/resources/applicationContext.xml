@@ -32,18 +32,19 @@
 	</bean>
 	<bean id="userDAO" class="tommy.spring.web.user.impl.UserDAO"></bean>
  -->
-	<bean id="log" class="tommy.spring.web.common.Log4JAdvice"></bean>
+	<!-- <bean id="log" class="tommy.spring.web.common.Log4JAdvice"></bean>
 	<bean id="before" class="tommy.spring.web.common.BeforeAdvice"></bean>
-	<bean id="after" class="tommy.spring.web.common.AfterReturningAdvice"></bean>
+	<bean id="afterReturning" class="tommy.spring.web.common.AfterReturningAdvice"></bean>
 	<bean id="around" class="tommy.spring.web.common.AroundAdvice"></bean>
 	<bean id="afterThrowing" class="tommy.spring.web.common.AfterThrowingAdvice"></bean>
 	<aop:config>
-		<aop:pointcut expression="execution(* tommy.spring.web..*Impl.*(..))" id="allPointcut"/>
+		<aop:pointcut expression="execution(* tommy.spring.web..*Impl.*(..))" id="allPointcut"/> 
 		<aop:pointcut expression="execution(* tommy.spring.web..*Impl.get*(..))" id="getPointcut"/>
-		<aop:aspect ref="afterThrowing">
-			<aop:after-throwing method="expectionLog" pointcut-ref="allPointcut"/>
+		<aop:aspect ref="afterReturning">
+			<aop:after-returning method="afterLog" pointcut-ref="getPointcut" returning="returnObj" />
 		</aop:aspect>
-	</aop:config>
+	</aop:config> -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 
 </beans>
