@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import tommy.spring.web.impl.BoardVO;
+import tommy.spring.collection.BoardVO;
+
+
 
 
 
@@ -14,6 +16,7 @@ public class BoardServicClient {
 		AbstractApplicationContext container=new GenericXmlApplicationContext("applicationContext.xml");
 		BoardService boardService=(BoardService)container.getBean("boardService");
 		BoardVO vo= new BoardVO();
+		//vo.setSeq(1000);
 		vo.setTitle("임시제목");
 		vo.setWriter("홍길동");
 		vo.setContent("일빠...");

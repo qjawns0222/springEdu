@@ -2,7 +2,9 @@ package tommy.spring.web.board;
 
 import java.util.List;
 
-import tommy.spring.web.impl.BoardVO;
+import tommy.spring.collection.BoardVO;
+
+
 
 public interface BoardService {
 	void insertBoard(BoardVO vo);

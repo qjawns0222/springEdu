@@ -16,7 +16,7 @@ public class BoardDAO {
 	private PreparedStatement pstmt=null;
 	private ResultSet rs=null;
 	private final String BOARD_INSERT="insert into myboard(seq,title,writer,content) values((select nvl(max(seq),0)+1 from myboard),?,?,?)";
-	private final String BOARD_UPDATE="update myboard set title=?.content=? where seq=?";
+	private final String BOARD_UPDATE="update myboard set title=?,content=? where seq=?";
 	private final String BOARD_DELETE="delete myboard where seq=?";
 	private final String BOARD_GET="select * from myboard where seq=?";
 	private final String BOARD_LIST="select * from myboard order by seq desc";
