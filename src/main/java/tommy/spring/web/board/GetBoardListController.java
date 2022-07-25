@@ -6,25 +6,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+
 
 import tommy.spring.web.impl.BoardDAO;
 import tommy.spring.web.impl.BoardVO;
 
-public class GetBoardListController implements Controller {
+public class GetBoardListController {
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) {
-		//System.out.println("글 목록 검색 처리");
-		BoardVO vo = new BoardVO();
-		BoardDAO boardDAO = new BoardDAO();
-		List<BoardVO> boardList = boardDAO.getBoardList(vo);
-		HttpSession session=request.getSession();
-		session.setAttribute("boardList", boardList);
-		ModelAndView mav=new ModelAndView();
-		mav.setViewName("getBoardList");
-		return mav;
-	}
+
 
 }
