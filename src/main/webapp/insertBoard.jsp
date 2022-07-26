@@ -9,7 +9,7 @@
 <body>
 <h1>글상세</h1>
 <a href="logout.do">Log Out</a><hr>
-<form action="insertBoard.do" method="post">
+<form action="insertBoard.do" method="post" enctype="multipart/form-data">
 <table border="1">
 <tr>
 	<td>제목</td>
@@ -23,7 +23,10 @@
 	<td>내용</td>
 	<td><textarea name="content"></textarea></td>
 </tr>
-
+<tr>
+	<td>업로드</td>
+	<td><input name="uploadFile" type="file" /></td>
+</tr>
 <tr>
 	<td colsapn="2"><input type="submit" value="새글등록"/></td>
 </tr>

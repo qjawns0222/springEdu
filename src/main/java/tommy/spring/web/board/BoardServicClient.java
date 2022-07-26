@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import tommy.spring.collection.BoardVO;
+import tommy.spring.web.impl.BoardVO;
+
+
 
 
 

@@ -27,6 +27,10 @@ public class LoginController {
 	public String login(UserVO vo,UserDAO userdDAO,HttpSession session) {
 		System.out.println("로그인 인증 처리");
 		UserVO user=userdDAO.getUser(vo);
+		if(vo.getId()==null||vo.getId().equals("")) {
+			System.out.println("error");
+			throw new NullPointerException("아이디는 반드시 혜성이어야 합니다.");
+		}
 		if (user != null) {
 			session.setAttribute("userName", user.getName());
 			return "getBoardList.do";

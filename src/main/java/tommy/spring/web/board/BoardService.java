@@ -2,7 +2,7 @@ package tommy.spring.web.board;
 
 import java.util.List;
 
-import tommy.spring.collection.BoardVO;
+import tommy.spring.web.impl.BoardVO;
 
 
 

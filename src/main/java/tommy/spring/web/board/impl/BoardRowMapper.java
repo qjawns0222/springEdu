@@ -5,7 +5,8 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import tommy.spring.collection.BoardVO;
+import tommy.spring.web.impl.BoardVO;
+
 
 
 

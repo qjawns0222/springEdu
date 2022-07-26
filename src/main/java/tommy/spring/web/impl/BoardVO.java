@@ -2,6 +2,8 @@ package tommy.spring.web.impl;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardVO {
 	private int seq;
 	private String title;
@@ -11,6 +13,14 @@ public class BoardVO {
 	private String searchKeyword;
 	private Date regDate;
 	private int cnt;
+	private MultipartFile uploadFile;
+	
+	public MultipartFile getUploadFile() {
+		return uploadFile;
+	}
+	public void setUploadFile(MultipartFile uploadFile) {
+		this.uploadFile = uploadFile;
+	}
 	public String getSearchCondition() {
 		return searchCondition;
 	}
